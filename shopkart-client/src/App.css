@@ -1,0 +1,605 @@
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2937;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+/* ========================================
+   LOGIN AND REGISTER FORMS
+   Scoped to authentication pages
+======================================== */
+
+.auth-form {
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.auth-form div {
+    margin-bottom: 18px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.auth-form input {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.auth-form button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.auth-form + p {
+    text-align: center;
+}
+
+.auth-form + p button {
+    margin-left: 8px;
+    padding: 6px 12px;
+}
+
+/* ========================================
+   GLOBAL BUTTON DEFAULTS
+======================================== */
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 40px;
+    background: #111827;
+    color: white;
+}
+
+nav h2 {
+    margin: 0;
+    color: white;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav button {
+    background: transparent;
+    border: 1px solid white;
+}
+
+nav button:hover {
+    background: white;
+    color: #111827;
+}
+
+nav + h1 {
+    margin-top: 60px;
+}
+
+nav ~ div {
+    text-align: center;
+}
+
+nav ~ div h2 {
+    margin-top: 20px;
+}
+
+/* ========================================
+   PRODUCTS PAGE
+======================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.product-card {
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.product-card h3 {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.product-card p {
+    margin: 8px 0;
+}
+
+.product-card button {
+    margin-top: 10px;
+}
+
+/* ========================================
+   PRODUCT DETAILS PAGE
+======================================== */
+
+.product-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.product-details img {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-details h1 {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.product-details h2 {
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+.product-details p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.product-details button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 16px;
+}
+
+/* ========================================
+   WISHLIST PAGE
+======================================== */
+
+.wishlist-page {
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.wishlist-page h1 {
+    margin-bottom: 35px;
+    font-size: 36px;
+}
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wishlist-card {
+    overflow: hidden;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.wishlist-card:hover {
+    transform: translateY(-5px);
+}
+
+.wishlist-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.wishlist-card-content {
+    padding: 20px;
+}
+
+.wishlist-card-content h2 {
+    margin: 10px 0;
+}
+
+.wishlist-category {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.wishlist-description {
+    min-height: 45px;
+    color: #666;
+}
+
+.wishlist-card-content h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.wishlist-card-content button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #e53935;
+    color: white;
+    cursor: pointer;
+}
+
+.wishlist-card-content button:hover {
+    background: #c62828;
+}
+
+.empty-wishlist {
+    margin-top: 60px;
+}
+
+.empty-wishlist p {
+    color: #666;
+}
+
+/* ========================================
+   CHECKOUT PAGE
+   Keep checkout layout separate from auth forms
+======================================== */
+
+.checkout-page {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 45px 24px 70px;
+    background: #f5f7fb;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.checkout-page .checkout-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.checkout-page .checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: start;
+    gap: 28px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.checkout-page .shipping-card,
+.checkout-page .checkout-summary {
+    width: 100%;
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 5px 25px rgba(15, 23, 42, 0.04);
+}
+
+.checkout-page .checkout-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.checkout-page .checkout-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.checkout-page .checkout-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.checkout-page .checkout-field label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.checkout-page .checkout-field input,
+.checkout-page .checkout-field textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    color: #111827;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.checkout-page .checkout-field input {
+    height: 46px;
+}
+
+.checkout-page .checkout-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.checkout-page .checkout-field input:focus,
+.checkout-page .checkout-field textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.checkout-page .checkout-field input[readonly] {
+    background: #f9fafb;
+    color: #6b7280;
+}
+
+.checkout-page .checkout-error {
+    display: block;
+    color: #dc2626;
+    font-size: 12px;
+}
+
+.checkout-page .checkout-summary {
+    position: sticky;
+    top: 24px;
+}
+
+.checkout-page .checkout-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.checkout-page .checkout-product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.checkout-page .checkout-product-info h3 {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.checkout-page .checkout-product-info p {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.checkout-page .checkout-primary-button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.checkout-page .checkout-primary-button:hover {
+    background: #1d4ed8;
+}
+
+.checkout-page .checkout-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.checkout-page .checkout-message p {
+    max-width: 420px;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+======================================== */
+
+@media (max-width: 900px) {
+    .products-grid,
+    .wishlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .checkout-page .checkout-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .checkout-page .checkout-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 700px) {
+    .product-details {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px;
+    }
+
+    .product-details h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .auth-form {
+        width: 90%;
+        padding: 22px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    nav h2 {
+        font-size: 20px;
+    }
+
+    nav div {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .products-grid,
+    .wishlist-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: 90%;
+    }
+
+    .wishlist-page {
+        padding: 28px 14px;
+    }
+
+    .checkout-page {
+        padding: 28px 14px 45px;
+    }
+
+    .checkout-page .shipping-card,
+    .checkout-page .checkout-summary {
+        padding: 20px;
+    }
+
+    .checkout-page .checkout-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .checkout-page .checkout-field.full-width {
+        grid-column: auto;
+    }
+}
